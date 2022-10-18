@@ -1,6 +1,7 @@
 import React from "react";
 import { ButtonContainer, RightSide, Tags } from ".";
 import star from "../../images/star.png";
+import Vector from "../../images/Vector.svg";
 
 const Button = () => {
   return (
@@ -17,7 +18,9 @@ const Button = () => {
       </Tags>
       <RightSide>
         <p>show rows</p>
-        <span>100</span>
+        <span>
+          100 <img src={Vector} alt="" />
+        </span>
       </RightSide>
     </ButtonContainer>
   );

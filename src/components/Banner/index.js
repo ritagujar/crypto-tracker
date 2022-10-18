@@ -4,6 +4,9 @@ export const BannerContainer = styled.div`
   /* height: 280px; */
   /* background-color: cyan; */
   border-bottom: 1px solid #dedfe2;
+  @media only screen and (max-width: 480px) {
+    border-bottom: none;
+  }
 
   h1 {
     font-family: "Inter";
@@ -14,5 +17,14 @@ export const BannerContainer = styled.div`
     letter-spacing: -0.03em;
     margin-top: 10px;
     color: #000000;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 `;

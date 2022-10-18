@@ -15,3 +15,27 @@ body {
   margin: auto;
   overflow: hidden;
 }
+
+@media only screen and (max-width: 1279px) {
+  .container {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .table thead tr th:nth-last-child(-n + 4),
+  .table tbody tr td:nth-last-child(-n + 5) {
+    display: none;
+  }
+
+  .table thead tr th:nth-child(2),
+  .table tbody tr td:nth-child(2) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .table thead tr th:nth-last-child(-n + 2),
+  .table tbody tr td:nth-last-child(-n + 3) {
+    display: none;
+  }
+}
