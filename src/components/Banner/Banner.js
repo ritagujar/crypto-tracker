@@ -3,6 +3,7 @@ import { BannerContainer, Card, CardContainer, TextContainer } from "./index";
 import quize from "../../images/quize.png";
 import portfolio1 from "../../images/portfolio1.png";
 import portfolio2 from "../../images/portfolio2.png";
+import Button from "../Button/Button";
 
 const Banner = () => {
   return (
@@ -30,6 +31,9 @@ const Banner = () => {
           </TextContainer>
         </Card>
       </CardContainer>
+
+      <h1> Top 100 Cryptocurrencies by Market Cap</h1>
+      <Button />
     </BannerContainer>
   );
 };

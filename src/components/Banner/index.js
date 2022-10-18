@@ -1,14 +1,27 @@
 import styled from "styled-components";
 
 export const BannerContainer = styled.div`
-  margin-top: 34px;
-  height: 306px;
-  background-color: cyan;
+  height: 280px;
+  /* background-color: cyan; */
+  border-bottom: 1px solid #dedfe2;
+
+  h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.03em;
+    margin-top: 10px;
+    color: #000000;
+  }
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   gap: 11.82px;
+  margin-top: 34px;
+
   /* padding-top: 2rem; */
 `;
 
