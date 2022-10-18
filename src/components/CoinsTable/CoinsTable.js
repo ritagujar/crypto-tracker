@@ -34,54 +34,52 @@ const CoinsTable = () => {
           </thead>
           <tbody>
             {coins.map((coin, index) => (
-              <>
-                <tr key={coin.id}>
-                  <td>
-                    {" "}
-                    <img
-                      src={star}
-                      alt="star"
-                      style={{
-                        width: "13px",
-                        height: "13px",
-                      }}
-                    />
-                  </td>
-                  <td>{index + 1}</td>
-                  <td>
-                    <img src={coin.image} alt="" />
-                    {coin.name}
-                    <span>{coin.symbol}</span>
-                  </td>
-                  <td>${numberWithCommas(coin.current_price)}</td>
-                  <td style={{ color: "#EA3943" }}>
-                    {" "}
-                    <img
-                      src={downarrow}
-                      alt=""
-                      style={{ width: "10px", height: "6px" }}
-                    />
-                    {coin.price_change_percentage_24h.toFixed(2)}%
-                  </td>
-                  <td style={{ color: "#16C784 " }}>
-                    {" "}
-                    <img
-                      src={uparrow}
-                      alt=""
-                      style={{ width: "10px", height: "6px" }}
-                    />
-                    {coin.price_change_percentage_24h.toFixed(2)}%
-                  </td>
-                  <td>
-                    ${numberWithCommas(coin.market_cap.toString().slice(0, -6))}
-                  </td>
-                  <td>${numberWithCommas(coin.total_volume)}</td>
-                  <td>${numberWithCommas(coin.circulating_supply)}</td>
-                  <td>
-                    <BsThreeDotsVertical />
-                  </td>
-                </tr>
-              </>
+              <tr key={coin.id}>
+                <td>
+                  {" "}
+                  <img
+                    src={star}
+                    alt="star"
+                    style={{
+                      width: "13px",
+                      height: "13px",
+                    }}
+                  />
+                </td>
+                <td>{index + 1}</td>
+                <td>
+                  <img src={coin.image} alt="" />
+                  {coin.name}
+                  <span>{coin.symbol}</span>
+                </td>
+                <td>${numberWithCommas(coin.current_price)}</td>
+                <td style={{ color: "#EA3943" }}>
+                  {" "}
+                  <img
+                    src={downarrow}
+                    alt=""
+                    style={{ width: "10px", height: "6px" }}
+                  />
+                  {coin.price_change_percentage_24h.toFixed(2)}%
+                </td>
+                <td style={{ color: "#16C784 " }}>
+                  {" "}
+                  <img
+                    src={uparrow}
+                    alt=""
+                    style={{ width: "10px", height: "6px" }}
+                  />
+                  {coin.price_change_percentage_24h.toFixed(2)}%
+                </td>
+                <td>
+                  ${numberWithCommas(coin.market_cap.toString().slice(0, -6))}
+                </td>
+                <td>${numberWithCommas(coin.total_volume)}</td>
+                <td>${numberWithCommas(coin.circulating_supply)}</td>
+                <td>
+                  <BsThreeDotsVertical />
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
