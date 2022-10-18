@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerContainer = styled.div`
-  height: 280px;
+  /* height: 280px; */
   /* background-color: cyan; */
   border-bottom: 1px solid #dedfe2;
 
