@@ -52,7 +52,6 @@ export const TableContainer = styled.div`
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
-        /* identical to box height, or 171% */
         color: #222531;
 
         @media only screen and (max-width: 450px) {
@@ -68,10 +67,7 @@ export const TableContainer = styled.div`
         font-weight: 500;
         font-size: 12px;
         line-height: 15px;
-        /* identical to box height */
-
         letter-spacing: -0.035em;
-
         color: #000000;
       }
     }

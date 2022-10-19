@@ -5,8 +5,6 @@ export const NavbarContainer = styled.div`
   box-shadow: 0px 0px 1.2rem rgba(16, 38, 73, 0.06);
   border-bottom: 1px solid #dedfe2;
   background-color: #ffffff;
-
-  /* background-color: red; */
 `;
 
 export const NavbarContent = styled.div`
@@ -44,10 +42,6 @@ export const Hamburger = styled.div`
       display: none;
     }
   }
-
-  span {
-    @media only screen and (max-width: 480px) {
-      display: none;
-    }
-  }
 `;
+
+export const SearchImg = styled.span;

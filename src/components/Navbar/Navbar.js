@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Hamburger,
-  Heading,
-  NavbarContainer,
-  NavbarContent,
-  SearchImg,
-} from "./index.js";
+import { Hamburger, Heading, NavbarContainer, NavbarContent } from "./index.js";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Ellipse from "../../images/ellipse.svg";
 import search from "../../images/search.png";
@@ -21,9 +15,7 @@ const Navbar = () => {
         </Heading>
 
         <Hamburger>
-          <span>
-            <img src={search} alt="" />
-          </span>
+          <img src={search} alt="" />
           <GiHamburgerMenu />
         </Hamburger>
       </NavbarContent>
