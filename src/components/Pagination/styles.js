@@ -20,9 +20,9 @@ export const PaginationContainer = styled.div`
     color: #212b36;
     /* border-radius: 4px; */
 
-    @media only screen and (max-width: 330px) {
+    @media only screen and (max-width: 390px) {
       font-size: 11px;
-      padding: 4px;
+      padding: 3px;
     }
 
     &:hover {
