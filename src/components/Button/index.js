@@ -15,7 +15,7 @@ export const Tags = styled.div`
   gap: 8px;
   margin: 15px 0;
 
-  span {
+  button {
     display: flex;
     align-items: center;
     padding: 8px;
@@ -27,7 +27,8 @@ export const Tags = styled.div`
     font-size: 12px;
     line-height: 18px;
     color: #000000;
-
+    border: none;
+    cursor: pointer;
     img {
       width: 13px;
       height: 13px;
@@ -41,7 +42,7 @@ export const RightSide = styled.div`
   gap: 8px;
   margin: 15px 0;
 
-  span {
+  button {
     padding: 8px;
     background: #eff2f5;
     border-radius: 8px;
@@ -51,5 +52,7 @@ export const RightSide = styled.div`
     font-size: 12px;
     line-height: 18px;
     color: #000000;
+    border: none;
+    cursor: pointer;
   }
 `;

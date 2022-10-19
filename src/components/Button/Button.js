@@ -8,19 +8,19 @@ const Button = () => {
     <ButtonContainer>
       <Tags>
         {" "}
-        <span>
+        <button>
           <img src={star} alt="" />
           Favourites
-        </span>
-        <span>CryptoCurrencies</span>
-        <span>DeFi</span>
-        <span>NFTs & Collectibles</span>
+        </button>
+        <button>CryptoCurrencies</button>
+        <button>DeFi</button>
+        <button>NFTs & Collectibles</button>
       </Tags>
       <RightSide>
         <p>show rows</p>
-        <span>
+        <button>
           100 <img src={Vector} alt="" />
-        </span>
+        </button>
       </RightSide>
     </ButtonContainer>
   );
