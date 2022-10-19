@@ -7,17 +7,19 @@ import downarrow from "../../images/downarrow.png";
 import uparrow from "../../images/uparrow.png";
 import stroke from "../../images/stroke.svg";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import Pagination from "../Pagination/Pagination";
 
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const CoinsTable = () => {
-  const [page, setPage] = useState(1);
   const [coins, loading] = useData();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
 
-  // console.log(coins);
-  console.log(loading);
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
@@ -52,7 +54,7 @@ const CoinsTable = () => {
               </thead>
               <tbody>
                 {coins
-                  .slice((page - 1) * 10, (page - 1) * 10 + 10)
+                  .slice((currentPage - 1) * 10, (currentPage - 1) * 10 + 10)
                   .map((coin, index) => (
                     <tr key={coin.id}>
                       <td style={{ textAlign: "left" }}>
@@ -66,7 +68,9 @@ const CoinsTable = () => {
                           }}
                         />
                       </td>
-                      <td style={{ textAlign: "left" }}>{index + 1}</td>
+                      <td style={{ textAlign: "left" }}>
+                        {coin.market_cap_rank}
+                      </td>
                       <td style={{ textAlign: "left" }}>
                         <img src={coin.image} alt="" />
                         {coin.name}
@@ -115,6 +119,11 @@ const CoinsTable = () => {
           </>
         )}
       </TableContainer>
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={coins.length}
+        paginate={paginate}
+      />
     </>
   );
 };
