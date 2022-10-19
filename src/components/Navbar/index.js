@@ -14,10 +14,10 @@ export const NavbarContent = styled.div`
   align-items: center;
 
   img {
-    height: 16.581195831298828px;
+    height: 16.5px;
     width: 16px;
     left: 1490px;
-    top: 21.7628173828125px;
+    top: 21.7px;
     border-radius: 0px;
   }
 `;
@@ -35,6 +35,7 @@ export const Heading = styled.div`
 
 export const Hamburger = styled.div`
   height: 12px;
+  position: relative;
 
   img {
     margin-right: 10px;

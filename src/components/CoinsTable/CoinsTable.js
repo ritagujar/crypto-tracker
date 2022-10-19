@@ -20,6 +20,8 @@ const CoinsTable = () => {
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const prevPage = () => setCurrentPage(currentPage - 1);
+  const nextPage = () => setCurrentPage(currentPage + 1);
 
   return (
     <>
@@ -123,6 +125,9 @@ const CoinsTable = () => {
         postsPerPage={postsPerPage}
         totalPosts={coins.length}
         paginate={paginate}
+        currentPage={currentPage}
+        prevPage={prevPage}
+        nextPage={nextPage}
       />
     </>
   );

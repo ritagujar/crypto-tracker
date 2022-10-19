@@ -1,7 +1,14 @@
 import React from "react";
 import { PaginationContainer } from "./styles";
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({
+  postsPerPage,
+  totalPosts,
+  paginate,
+  currentPage,
+  prevPage,
+  nextPage,
+}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -11,13 +18,21 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   return (
     <PaginationContainer className="container">
       <ul className="pagination">
+        {currentPage !== 1 && <button onClick={() => prevPage()}>«</button>}
+
         {pageNumbers.map((number) => (
-          <li key={number}>
-            <a onClick={() => paginate(number)} href="!#">
-              {number}
-            </a>
-          </li>
+          <button
+            key={number}
+            onClick={() => paginate(number)}
+            href="!#"
+            className={`${currentPage === number ? "active" : "none"}`}
+          >
+            {number}
+          </button>
         ))}
+        {pageNumbers.length !== currentPage && (
+          <button onClick={() => nextPage()}>»</button>
+        )}
       </ul>
     </PaginationContainer>
   );

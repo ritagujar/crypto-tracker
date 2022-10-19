@@ -21,7 +21,13 @@ body {
     margin: 0 10px;
   }
 }
+.active {
+  border: 2px solid #0052fe;
+}
 
+/* .none {
+  border: 1px solid #dfe3e8;
+} */
 @media only screen and (max-width: 550px) {
   .table thead tr th:nth-last-child(-n + 4),
   .table tbody tr td:nth-last-child(-n + 5) {
