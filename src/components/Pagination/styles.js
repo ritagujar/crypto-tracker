@@ -28,6 +28,11 @@ export const PaginationContainer = styled.div`
     &:hover {
       color: #212b36;
     }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
   }
 
   ul {

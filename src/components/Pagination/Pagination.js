@@ -18,7 +18,14 @@ const Pagination = ({
   return (
     <PaginationContainer className="container">
       <ul className="pagination">
-        {currentPage !== 1 && <button onClick={() => prevPage()}>«</button>}
+        {
+          <button
+            onClick={() => prevPage()}
+            disabled={currentPage === 1 ? true : false}
+          >
+            «
+          </button>
+        }
 
         {pageNumbers.map((number) => (
           <button
@@ -30,9 +37,14 @@ const Pagination = ({
             {number}
           </button>
         ))}
-        {pageNumbers.length !== currentPage && (
-          <button onClick={() => nextPage()}>»</button>
-        )}
+        {
+          <button
+            onClick={() => nextPage()}
+            disabled={pageNumbers.length === currentPage ? true : false}
+          >
+            »
+          </button>
+        }
       </ul>
     </PaginationContainer>
   );
