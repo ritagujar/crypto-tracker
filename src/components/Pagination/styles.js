@@ -22,7 +22,7 @@ export const PaginationContainer = styled.div`
 
     @media only screen and (max-width: 390px) {
       font-size: 11px;
-      padding: 3px;
+      padding: 3.5px;
     }
 
     &:hover {
@@ -42,7 +42,7 @@ export const PaginationContainer = styled.div`
     list-style-type: none;
 
     @media only screen and (max-width: 350px) {
-      gap: 4px;
+      gap: 3.2px;
     }
   }
 
